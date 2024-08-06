@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Aprende Matemáticas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 200vh;
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+            animation: moveStars 60s linear infinite;
+        }
+
+        @keyframes moveStars {
+            from { background-position: 0 0; }
+            to { background-position: 10000px 10000px; }
+        }
+
+        .page {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+
+        h1, h2, h3, h4, p {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h3 {
+            color: #87CEEB;
+        }
+
+        h2 {
+            color: #ADD8E6;
+        }
+
+        h4 {
+            color: #B0E0E6;
+        }
+
+        p {
+            color: #D3D3D3;
+        }
+
+        .button-container {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF; /* Color inicial, cambiar aleatoriamente con JS */
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <!-- Sección 1: Introducción -->
+    <div id="page1" class="page active">
+        <h1>Aprende Matemáticas</h1>
+        <h2>Descripción</h2>
+        <p>En esta página se le intentará reforzar a niños y niñas de primaria cuáles son los símbolos de la matemática, dónde se encuentra cada valor posicional, sumar, restar, multiplicar y dividir con palabras y videos educativos.</p>
+
+        <h2>¿Qué es la matemática?</h2>
+        <p>La matemática es como un juego con números y formas que nos ayuda a entender muchas cosas. ¡Mira cómo funciona!</p>
+
+        <h3>1. Símbolos De La Matemática</h3>
+        <p>Los símbolos de la matemática son dibujos especiales que usamos para mostrar qué hacer con los números. Ayudan a entender y resolver problemas de matemáticas.</p>
+
+        <h3>2. El Valor Posicional</h3>
+        <p>El valor posicional es un concepto matemático que determina el valor de un dígito en un número basado en su posición dentro de ese número.</p>
+
+        <h3>3. Sumar</h3>
+        <p>Sumar es cuando juntamos cosas y encontramos cuántas hay en total.</p>
+
+        <h3>4. Restar</h3>
+        <p>Restar es cuando quitamos cosas y vemos cuántas quedan.</p>
+
+        <h3>5. Multiplicar</h3>
+        <p>Multiplicar es cuando tenemos varios grupos iguales y queremos saber cuántas cosas hay en total.</p>
+
+        <h3>6. Dividir</h3>
+        <p>Dividir es cuando repartimos cosas en partes iguales entre amigos.<br>.<br>.<br>.</p>
+    </div>
+
+    <!-- Sección 2: Capítulo 1 -->
+    <div id="page2" class="page">
+        <h2>Capítulo 1: Símbolos de Operaciones Matemáticas</h2>
+        <h3>1. Suma</h3>
+        <h4>Símbolo: +</h4>
+        <p>Descripción: Este símbolo se usa para juntar números.</p>
+
+        <h3>2. Resta</h3>
+        <h4>Símbolo: −</h4>
+        <p>Descripción: Este símbolo se usa para quitar números.</p>
+
+        <h3>3. Multiplicación</h3>
+        <h4>Símbolo: ×</h4>
+        <p>Descripción: Este símbolo se usa para hacer grupos iguales de números.</p>
+
+        <h3>4. División</h3>
+        <h4>Símbolo: ÷</h4>
+        <p>Descripción: Este símbolo se usa para repartir números en partes iguales.</p>
+    </div>
+    <!-- Sección 3: Capítulo 2 -->
+    <div id="page3" class="page">
+        <h2>Capítulo 2: El Valor Posicional</h2>
+        <p>El valor posicional determina el valor de un dígito en un número según su posición.</p>
+
+        <h3>Valores Posicionales</h3>
+
+        <h4>1. Unidades:</h4>
+        <p>Ejemplo: En el número 5, el 5 está en el lugar de las unidades.</p>
+
+        <h4>2. Decenas:</h4>
+        <p>Ejemplo: En el número 54, el 4 está en el lugar de las unidades y el 5 en el lugar de las decenas.</p>
+
+        <h4>3. Centenas:</h4>
+        <p>Ejemplo: En el número 542, el 2 está en el lugar de las unidades, el 4 en el de las decenas y el 5 en el de las centenas.</p>
+
+        <h4>4. Unidades de Mil:</h4>
+        <p>Ejemplo: En el número 1542, el 1 está en el lugar de las unidades de mil.</p>
+
+        <h3>Ejemplo Completo</h3>
+        <p>En el número 3725: El 5 está en el lugar de las unidades, el 2 en las decenas, el 7 en las centenas y el 3 en las unidades de mil.</p>
+
+        <h3>Resumen</h3>
+        <h4>Unidades:</h4>
+        <p>Representan un solo número (0-9).</p>
+        <h4>Decenas:</h4>
+        <p>Representan grupos de diez (10, 20, 30, etc.).</p>
+        <h4>Centenas:</h4>
+        <p>Representan grupos de cien (100, 200, 300, etc.).</p>
+        <h4>Unidades de Mil:</h4>
+        <p>Representan grupos de mil (1000, 2000, 3000, etc.).<br>.</p>
+    </div>
+
+    <!-- Sección 4: Capítulo 3 -->
+    <div id="page4" class="page">
+        <h2>Capítulo 3: La Suma</h2>
+
+        <h3>¿Qué es sumar?</h3>
+        <p>Sumar es como juntar cosas para ver cuántas tienes en total.</p>
+
+        <h3>¿Cómo funciona la suma?</h3>
+
+        <h4>1. Empieza con un número.</h4>
+        <p>Imagina que tienes tres juguetes.</p>
+
+        <h4>2. Añade más cosas.</h4>
+        <p>Luego, alguien te da dos juguetes más.</p>
+
+        <h4>3. Cuenta todos juntos.</h4>
+        <p>Ahora cuenta todos los juguetes que tienes en total. Tienes cinco juguetes en total.</p>
+
+        <h3>Ejemplos para practicar:</h3>
+
+        <h4>Dulces:</h4>
+        <p>Tienes cuatro dulces y te dan tres más. En total, tienes siete dulces.</p>
+
+        <h4>Estrellas:</h4>
+        <p>Ves cinco estrellas y luego ves dos más. En total, tienes siete estrellas.</p>
+
+        <h4>Pelotitas:</h4>
+        <p>Tienes seis pelotitas y encuentras una más. En total, tienes siete pelotitas.</p>
+
+        <h3>¿Cómo hacerlo?</h3>
+
+        <h4>1. Cuenta lo que ya tienes.</h4>
+        <p>Empieza con el número inicial de cosas.</p>
+
+        <h4>2. Añade el nuevo número.</h4>
+        <p>Agrega el número de cosas nuevas que recibiste.</p>
+
+        <h4>3. Cuenta todo junto.</h4>
+        <p>Al final, cuenta todas las cosas juntas para saber el total.</p>
+
+        <h3>Recuerda:</h3>
+        <p>Sumar es simplemente juntar las cosas que tienes y contar cuántas hay en total.<br>.</p>
+    </div>
+
+    <!-- Sección 5: Capítulo 4 -->
+    <div id="page5" class="page">
+        <h2>Capítulo 4: La Resta</h2>
+
+        <h3>¿Qué es restar?</h3>
+        <p>Restar es como quitar cosas para ver cuántas quedan.</p>
+
+        <h3>¿Cómo funciona la resta?</h3>
+
+        <h4>1. Empieza con un número.</h4>
+        <p>Imagina que tienes ocho caramelos.</p>
+
+        <h4>2. Quita algunas cosas.</h4>
+        <p>Si comes tres caramelos, ahora te quedan cinco.</p>
+
+        <h4>3. Cuenta lo que queda.</h4>
+        <p>Después de comer tres caramelos, te quedan cinco.</p>
+
+        <h3>Ejemplos para practicar:</h3>
+
+        <h4>Manzanas:</h4>
+        <p>Tenías siete manzanas y comes dos. Ahora tienes cinco manzanas.</p>
+
+        <h4>Globos:</h4>
+        <p>Tuviste diez globos y se te rompen cuatro. Ahora tienes seis globos.</p>
+
+        <h4>Libros:</h4>
+        <p>Tenías nueve libros y prestaste tres. Ahora tienes seis libros.</p>
+
+        <h3>¿Cómo hacerlo?</h3>
+
+        <h4>1. Empieza con el número inicial.</h4>
+        <p>Cuenta cuántas cosas tienes al principio.</p>
+
+        <h4>2. Resta el número de cosas que quitas.</h4>
+        <p>Quita el número de cosas que se llevan o desaparecen.</p>
+
+        <h4>3. Cuenta lo que queda.</h4>
+        <p>Al final, cuenta las cosas que te quedan después de la resta.</p>
+
+        <h3>Recuerda:</h3>
+        <p>Restar es simplemente quitar cosas y contar cuántas quedan.<br>.</p>
+    </div>
+    <!-- Sección 6: Capítulo 5 -->
+        <div id="page6" class="page">
+            <h2>Capítulo 5: La Multiplicación</h2>
+
+            <h3>¿Qué es multiplicar?</h3>
+            <p>Multiplicar es como hacer grupos iguales de cosas para saber cuántas hay en total.</p>
+
+            <h3>¿Cómo funciona la multiplicación?</h3>
+
+            <h4>1. Empieza con un número.</h4>
+            <p>Imagina que tienes tres grupos de manzanas.</p>
+
+            <h4>2. Decide cuántas cosas hay en cada grupo.</h4>
+            <p>En cada grupo hay cuatro manzanas.</p>
+
+            <h4>3. Multiplica el número de grupos por la cantidad en cada grupo.</h4>
+            <p>Multiplica tres grupos por cuatro manzanas en cada grupo. Tienes un total de doce manzanas.</p>
+
+            <h3>Ejemplos para practicar:</h3>
+
+            <h4>Juguetes:</h4>
+            <p>Tienes cinco cajas con cuatro juguetes en cada caja. En total, tienes veinte juguetes.</p>
+
+            <h4>Estrellas:</h4>
+            <p>Hay siete filas de estrellas y cada fila tiene seis estrellas. En total, hay cuarenta y dos estrellas.</p>
+
+            <h4>Pelotitas:</h4>
+            <p>Tienes ocho bolsas y cada bolsa tiene tres pelotitas. En total, tienes veinticuatro pelotitas.</p>
+
+            <h3>¿Cómo hacerlo?</h3>
+
+            <h4>1. Cuenta el número de grupos.</h4>
+            <p>Cuenta cuántos grupos tienes.</p>
+
+            <h4>2. Cuenta cuántas cosas hay en cada grupo.</h4>
+            <p>Cuenta el número de cosas en cada grupo.</p>
+
+            <h4>3. Multiplica el número de grupos por la cantidad en cada grupo.</h4>
+            <p>Multiplica el número de grupos por la cantidad de cosas en cada grupo para encontrar el total.</p>
+
+            <h3>Recuerda:</h3>
+            <p>Multiplicar es simplemente hacer grupos iguales y contar el total de cosas en todos los grupos.</p>
+        </div>
+
+        <!-- Sección 7: Capítulo 6 -->
+        <div id="page7" class="page">
+            <h2>Capítulo 6: La División</h2>
+
+            <h3>¿Qué es dividir?</h3>
+            <p>Dividir es como repartir cosas en partes iguales entre amigos.</p>
+
+            <h3>¿Cómo funciona la división?</h3>
+
+            <h4>1. Empieza con un número total.</h4>
+            <p>Imagina que tienes doce galletas.</p>
+
+            <h4>2. Decide en cuántas partes quieres dividirlo.</h4>
+            <p>Quiero repartir las galletas entre cuatro amigos.</p>
+
+            <h4>3. Divide el número total entre el número de partes.</h4>
+            <p>Divide doce galletas entre cuatro amigos. Cada amigo recibe tres galletas.</p>
+
+            <h3>Ejemplos para practicar:</h3>
+
+            <h4>Chocolates:</h4>
+            <p>Tienes veinte chocolates y quieres repartirlos entre cinco amigos. Cada amigo recibe cuatro chocolates.</p>
+
+            <h4>Frutas:</h4>
+            <p>Hay veinticuatro frutas y quieres repartirlas en seis cestas. Cada cesta recibe cuatro frutas.</p>
+
+            <h4>Libros:</h4>
+            <p>Hay quince libros y quieres repartirlos en tres estantes. Cada estante recibe cinco libros.</p>
+
+            <h3>¿Cómo hacerlo?</h3>
+
+            <h4>1. Empieza con el número total.</h4>
+            <p>Cuenta el número total de cosas que quieres dividir.</p>
+
+            <h4>2. Decide en cuántas partes quieres dividirlo.</h4>
+            <p>Cuenta el número de partes en las que quieres dividir el total.</p>
+
+            <h4>3. Divide el total entre el número de partes.</h4>
+            <p>Divide el número total entre el número de partes para encontrar cuántas cosas hay en cada parte.</p>
+
+            <h3>Recuerda:</h3>
+            <p>Dividir es simplemente repartir cosas en partes iguales y contar cuántas cosas hay en cada parte.</p>
+        </div>
+
+        <div class="button-container">
+            <a href="#" class="button" id="prevButton">Anterior</a>
+            <a href="#" class="button" id="nextButton">Siguiente</a>
+        </div>
+
+        <script>
+            const pages = document.querySelectorAll('.page');
+            const prevButton = document.getElementById('prevButton');
+            const nextButton = document.getElementById('nextButton');
+            let currentPage = 0;
+
+            function showPage(index) {
+                pages.forEach((page, i) => {
+                    page.classList.toggle('active', i === index);
+                });
+            }
+
+            prevButton.addEventListener('click', () => {
+                if (currentPage > 0) {
+                    currentPage--;
+                    showPage(currentPage);
+                }
+            });
+
+            nextButton.addEventListener('click', () => {
+                if (currentPage < pages.length - 1) {
+                    currentPage++;
+                    showPage(currentPage);
+                }
+            });
+
+            // Inicialmente mostrar la primera página
+            showPage(currentPage);
+        </script>
+    </body>
+    </html>
